@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>第三節完成版｜林同學的作品集</title>
+  <!-- STEP 1-A：取消下一行的註解即可載入離線 Bootstrap CSS -->
+  <link href="../assets/vendor/bootstrap.min.css" rel="stylesheet">
+  <link href="styles.css" rel="stylesheet">
+</head>
+<body id="home">
+<a class="visually-hidden-focusable" href="#main">跳到主要內容</a>
+<!-- STEP 2-B：按鈕的 target 與下方 id 必須一致 -->
+<nav class="navbar navbar-expand-lg bg-body-tertiary" aria-label="主要導覽">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#home">林同學的作品集</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+      data-bs-target="#siteMenu" aria-controls="siteMenu" aria-expanded="false" aria-label="切換導覽選單">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="siteMenu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#about">關於我</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">作品</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">聯絡</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<main id="main" tabindex="-1" class="container">
+  <section id="about" class="py-5" aria-labelledby="introTitle">
+    <p class="text-primary fw-bold mb-2">網站系統建置與規劃</p>
+    <h1 id="introTitle" class="display-5 fw-bold">我的學習作品集</h1>
+    <p class="lead">你好，我是林同學。我正在學習網站系統建置與規劃，這裡整理我的課堂練習與觀察。</p>
+    <p class="text-body-secondary">範例人物與專案為課堂練習，照片為授權示意素材。</p>
+    <a class="btn btn-primary" href="#projects">瀏覽作品</a>
+  </section>
+  <section id="projects" class="pb-5" aria-labelledby="projectsTitle">
+    <h2 id="projectsTitle" class="h3 mb-4">作品練習</h2>
+    <!-- STEP 1-B：外層 row g-4，三個作品外層加入 col-12 col-md-6 col-lg-4 -->
+    <div class="row g-4">
+<div class="col-12 col-md-6 col-lg-4">
+  <!-- STEP 3-A：h-100 與 Flex 讓同列卡片按鈕對齊 -->
+  <article class="card h-100 project-card">
+    <img src="../assets/images/reading.jpg" class="card-img-top" alt="書店內的書架、座椅與閱讀空間">
+    <div class="card-body d-flex flex-column">
+      <p class="small text-body-secondary mb-2">內容整理</p>
+      <h3 class="card-title h4">閱讀地圖</h3>
+      <p class="card-text">整理喜歡的閱讀空間，讓同學找到適合安靜讀書的地方。</p>
+      <button type="button" class="btn btn-brand mt-auto align-self-start" data-bs-toggle="modal" data-bs-target="#readingModal">查看閱讀地圖</button>
+    </div>
+  </article>
+</div>
+<div class="col-12 col-md-6 col-lg-4">
+  <!-- STEP 3-A：h-100 與 Flex 讓同列卡片按鈕對齊 -->
+  <article class="card h-100 project-card">
+    <img src="../assets/images/workspace.jpg" class="card-img-top" alt="辦公桌上的筆記型電腦與工作設備">
+    <div class="card-body d-flex flex-column">
+      <p class="small text-body-secondary mb-2">介面設計</p>
+      <h3 class="card-title h4">學習工作站</h3>
+      <p class="card-text">記錄自己的數位學習工具，並練習讓不同長度的內容保持清楚的層級。從整理桌面到安排讀書時間，逐步建立可以持續使用的學習習慣。</p>
+      <button type="button" class="btn btn-brand mt-auto align-self-start" data-bs-toggle="modal" data-bs-target="#workspaceModal">查看學習工作站</button>
+    </div>
+  </article>
+</div>
+<div class="col-12 col-md-6 col-lg-4">
+  <!-- STEP 3-A：h-100 與 Flex 讓同列卡片按鈕對齊 -->
+  <article class="card h-100 project-card">
+    <img src="../assets/images/landscape.jpg" class="card-img-top" alt="自然地景與天空構成的開闊景色">
+    <div class="card-body d-flex flex-column">
+      <p class="small text-body-secondary mb-2">影像敘事</p>
+      <h3 class="card-title h4">旅途觀察筆記</h3>
+      <p class="card-text">用照片與短文記錄旅行中看到的風景。</p>
+      <button type="button" class="btn btn-brand mt-auto align-self-start" data-bs-toggle="modal" data-bs-target="#landscapeModal">查看旅途觀察筆記</button>
+    </div>
+  </article>
+</div>
+    </div>
+  </section>
+  
+  <!-- STEP 2-C：label 的 for 對應欄位 id，name 供未來後端辨識 -->
+<section id="contact" class="py-5" aria-labelledby="contactTitle">
+  <h2 id="contactTitle" class="h3 mb-3">聯絡練習</h2>
+  <p id="formHelp" class="text-body-secondary">此表單只示範瀏覽器輸入檢查，不會寄送或儲存資料。請使用虛構資料。</p>
+  <form id="contactForm" aria-describedby="formHelp">
+    <div class="row g-3">
+      <div class="col-md-6"><label for="visitorName" class="form-label">姓名</label>
+        <input class="form-control" id="visitorName" name="name" autocomplete="name" required></div>
+      <div class="col-md-6"><label for="visitorEmail" class="form-label">Email</label>
+        <input class="form-control" id="visitorEmail" name="email" type="email" autocomplete="email" required></div>
+      <div class="col-12"><label for="visitorMessage" class="form-label">留言</label>
+        <textarea class="form-control" id="visitorMessage" name="message" rows="3" required></textarea></div>
+    </div>
+    <button class="btn btn-primary mt-3" type="button" id="checkForm">檢查欄位（示範）</button>
+    <p id="formStatus" class="mt-3" role="status" aria-live="polite"></p>
+  </form>
+</section>
+</main>
+<footer class="container border-top py-4 text-body-secondary">
+  <p>林同學的課堂練習。<a href="../assets/image-credits.html">照片來源與授權</a></p>
+</footer>
+<!-- STEP 3-B：每一個 Modal 與標題均使用唯一 id -->
+<div class="modal fade" id="readingModal" tabindex="-1" aria-labelledby="readingModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+    <div class="modal-header">
+      <h2 class="modal-title fs-5" id="readingModalTitle">閱讀地圖</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="關閉"></button>
+    </div>
+    <div class="modal-body"><p>我把地點、開放時間與使用情境整理成同一種格式。這個練習讓我學會用卡片呈現重複內容，也開始思考圖片替代文字應該描述什麼。</p></div>
+    <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉介紹</button></div>
+  </div></div>
+</div>
+<!-- STEP 3-B：每一個 Modal 與標題均使用唯一 id -->
+<div class="modal fade" id="workspaceModal" tabindex="-1" aria-labelledby="workspaceModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+    <div class="modal-header">
+      <h2 class="modal-title fs-5" id="workspaceModalTitle">學習工作站</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="關閉"></button>
+    </div>
+    <div class="modal-body"><p>我為工具清單設計標題、說明與操作按鈕，並用 Flex 工具處理卡片高度不同時的按鈕對齊。頁面目前使用靜態內容，之後可以串接資料庫。</p></div>
+    <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉介紹</button></div>
+  </div></div>
+</div>
+<!-- STEP 3-B：每一個 Modal 與標題均使用唯一 id -->
+<div class="modal fade" id="landscapeModal" tabindex="-1" aria-labelledby="landscapeModalTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered"><div class="modal-content">
+    <div class="modal-header">
+      <h2 class="modal-title fs-5" id="landscapeModalTitle">旅途觀察筆記</h2>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="關閉"></button>
+    </div>
+    <div class="modal-body"><p>我練習替照片寫一段有重點的說明，並測試同一張圖片在窄螢幕與寬螢幕的呈現。圖片為授權示意素材，並非我的實際攝影作品。</p></div>
+    <div class="modal-footer"><button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉介紹</button></div>
+  </div></div>
+</div>
+<!-- Bootstrap Bundle 提供 Collapse / Modal 互動 -->
+<script src="../assets/vendor/bootstrap.bundle.min.js"></script>
+<script src="../assets/demo.js"></script>
+</body>
+</html>
