@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- STEP 1-A：取消下一行的註解即可載入離線 Bootstrap CSS -->
+  <style>
+     .campus-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+    .photo-row {
+    display: flex;
+    gap: 20px;
+  }
+
+  .photo-item {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .photo-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+  }
+
+  @media (max-width: 600px) {
+    .photo-row {
+      flex-direction: column;
+    }
+  }
+  </style>
+
+
+  
+</head>
+<body id="home">
+
+<main id="main" tabindex="-1" class="container">
+  <section id="about" class="py-5" aria-labelledby="introTitle">
+    <p class="text-primary fw-bold mb-2">網站系統建置與規劃</p>
+    <h1 id="introTitle" class="display-5 fw-bold">自我介紹</h1>
+    <p class="lead">113022066 AI系3A 陳姿云</p>
+    <p class="text-body-secondary">透過系上安排的學程，我認識到許多高中時期不曾接觸過的新知識，也學習到不同領域的專業技能。雖然在學習的過程中感到新鮮有趣，但對我來說，程式相關的課程仍然具有一定的難度。無論是理解程式碼的邏輯，還是實際動手寫程式，都需要花費更多時間練習與思考，有時即使課堂上聽懂了，實際操作時仍然會遇到非常多的問題。不過，我也了解到學習程式不能只靠死記硬背，而是需要透過不斷練習、尋找錯誤，才能解決問題。未來我希望自己能保持耐心，遇到不懂的地方時主動尋找資料或向他人請教，並慢慢累積經驗。</p>
+    
+  </section>
+  <section id="projects" class="pb-5" aria-labelledby="projectsTitle">
+    <h2 id="projectsTitle" class="h3 mb-4">照片</h2>
+    <!-- STEP 1-B：外層 row g-4，三個作品外層加入 col-12 col-md-6 col-lg-4 -->
+      <div class="photo-box">
+        <div class="photo-row">
+          <div class="photo-item">
+            <img src="圖書館.jpg" alt="圖書館">
+            <h3 class="h4">圖書館</h3>
+            <p>偶爾有空會到圖書館看書</p>
+          </div>
+          <div class="photo-item">
+            <img src="I棟.jpg" alt="I棟教學大樓">
+            <h3 class="h4">I棟</h3>
+            <p>這裡是我周一到周五都會來的地方，因為大多數的課程皆集中在這棟教學樓上課。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+</main>
+<footer class="container border-top py-4 text-body-secondary">
+  <p>照片來源:陳姿云本人實地拍攝</p>
+</footer>
+
+
+</body>
+</html>
